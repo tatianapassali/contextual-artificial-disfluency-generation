@@ -40,6 +40,7 @@ You can use this tool to auto-generate disfluencies such as repetitions, restart
 ```python
 >>> from python_files.disfluency_generation import LARD
 >>> lard = LARD()
+>>> eg = EmbeddingGenerator()
 ```
 
 ### Generate repetitions
@@ -66,7 +67,7 @@ You can generate replacements with different criteria. An example of usage for t
 
 ```python
 >>> fluent_sentence = "yes i am going to visit my family for a week ."
->>> disfluency = lard.create_replacements(fluent_sentence)
+>>> disfluency = lard.create_replacements(eg, fluent_sentence)
 >>> print(disfluency[0])
 'yes i am go no I am going to visit my family for a week .'
 ```
@@ -76,7 +77,7 @@ a random part-of speech will be selected along with a repair cue by default.
 
 ```python
 >>> fluent_sentence = "i prefer to drink coffee without sugar ."
->>> disfluency = lard.create_replacements(fluent_sentence)
+>>> disfluency = lard.create_replacements(eg, fluent_sentence)
 >>> print(disfluency[0])
 'i prefer to drink chocolate well I actually meant drink coffee without sugar .'
 ```
