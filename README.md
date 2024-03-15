@@ -84,7 +84,7 @@ a random part-of speech will be selected along with a repair cue by default.
 
 ```python
 >>> fluent_sentence = "I would like to eat pancakes for breakfast."
->>> disfluency = lard.create_replacements(fluent_sentence, candidate_pos='NOUN')
+>>> disfluency = lard.create_replacements(eg, fluent_sentence, candidate_pos='NOUN')
 >>> print(disfluency[0])
 'I would like to eat pancakes for dinner well I actually meant breakfast .'
 ```
